@@ -6,38 +6,36 @@ class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: CustomAppBar(),
+      appBar: CustomAppBar(),
       body: Padding(
         padding: EdgeInsets.only(
-          bottom: MediaQuery.of(context).padding.bottom + 10.h,
+          bottom: MediaQuery.of(context).padding.bottom + 16.h,
           left: 24.w,
           right: 24.w,
-          top: 16.h,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SvgPicture.asset(
-              'assets/svgs/mail.svg',
-              width: 54.5.w,
-              height: 54.5.h,
+              'assets/svgs/email.svg',
+              width: 56.72.w,
+              height: 56.72.h,
             ),
             Space.yf(16),
-            // AppHeadings(
-            //   title: 'Password link has sent!',
-            //   subtitle:
-            //       'Check your inbox to get the password link and reset your password.',
-            //   isCentered: false,
-            // ),
-            // Space.ym!,
-            // AppButton(
-            //   label: 'Check Inbox',
-            //   onPressed: () {
-            //     AppRoutes.resetPassword.push(context);
-            //   },
-            //   buttonType: ButtonType.primaryWithIconRight,
-            //   iconPath: 'assets/svgs/sms_out.svg',
-            // ),
+            AppHeadings(
+              title: 'Check Your Email',
+              subtitle:
+                  'Click On The Reset Password Link Sent To Your Email aya*****@gmail.com',
+              isCentered: false,
+              spacingBetweenTitleAndSubtitle: 8,
+            ),
+            Space.ym!,
+            AppButton(
+              label: 'Reset Password',
+              onPressed: () {
+                AppRoutes.resetPassword.push(context);
+              },
+            ),
           ],
         ),
       ),

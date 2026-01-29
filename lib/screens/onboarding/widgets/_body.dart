@@ -28,7 +28,7 @@ class _BodyState extends State<_Body> {
         _currentIndex++;
       });
     } else {
-      AppRoutes.signIn.push(context);
+      AppRoutes.signUp.push(context);
     }
   }
 
@@ -125,7 +125,9 @@ class _BodyState extends State<_Body> {
                   Space.yf(12),
                   AppButton(
                     label: 'Sign Up',
-                    onPressed: () {},
+                    onPressed: () {
+                      AppRoutes.signUp.push(context);
+                    },
                     buttonType: ButtonType.outlined,
                   ),
                 ],

@@ -36,8 +36,8 @@ class SeeAllHeading extends StatelessWidget {
         children: [
           Text(
             title,
-            style: AppText.b1b!
-                .w(fontWeight ?? 6)
+            style: AppText.b1bm!
+                .w(fontWeight ?? 5)
                 .copyWith(
                   fontSize: fontSize,
                   letterSpacing: 0,
@@ -49,12 +49,13 @@ class SeeAllHeading extends StatelessWidget {
               onTap: onTap,
               child: Text(
                 seeAllText ?? 'See all',
-                style: AppText.b2!
-                    .cl(seeAllTextColor ?? AppTheme.c.black!)
+                style: AppText.inter.b2!
+                    .cl(seeAllTextColor ?? AppTheme.c.text.shade800!)
                     .copyWith(
-                      letterSpacing: 0.3,
                       decoration: TextDecoration.underline,
-                      decorationColor: seeAllTextColor ?? AppTheme.c.black!,
+                      decorationColor:
+                          seeAllTextColor ?? AppTheme.c.text.shade800!,
+                      height: 1.5,
                     ),
               ),
             ),

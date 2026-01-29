@@ -1,17 +1,25 @@
 import 'package:convo_pro/router/routes.dart';
+import 'package:convo_pro/screens/create_account/create_account.dart';
+import 'package:convo_pro/screens/forgot_password/forgot_password.dart';
+import 'package:convo_pro/screens/link_sent/link_sent.dart';
 import 'package:convo_pro/screens/onboarding/onboarding.dart';
+import 'package:convo_pro/screens/reset_password/reset_password.dart';
 import 'package:convo_pro/screens/sign_in/sign_in.dart';
 import 'package:convo_pro/screens/splash/splash.dart';
+import 'package:convo_pro/screens/terms_conditions/terms_conditions.dart';
+import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
 final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.splash: (_) => const SplashScreen(),
   AppRoutes.onBoarding: (_) => const OnboardingScreen(),
   AppRoutes.signIn: (_) => const SignInScreen(),
-  // AppRoutes.signUp: (_) => const CreateAccountScreen(),
-  // AppRoutes.forgotPassword: (_) => const ForgotPasswordScreen(),
-  // AppRoutes.linkSent: (_) => const LinkSentScreen(),
-  // AppRoutes.resetPassword: (_) => const ResetPasswordScreen(),
+  AppRoutes.signUp: (_) => const CreateAccountScreen(),
+  AppRoutes.forgotPassword: (_) => const ForgotPasswordScreen(),
+  AppRoutes.linkSent: (_) => const LinkSentScreen(),
+  AppRoutes.resetPassword: (_) => const ResetPasswordScreen(),
+  AppRoutes.termsConditions: (_) => const TermsConditionsScreen(),
+  AppRoutes.bottomNavbar: (_) => const CustomBottomNavBar(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

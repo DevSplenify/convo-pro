@@ -1,14 +1,17 @@
 import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/router/routes.dart';
-import 'package:convo_pro/widgets/core/app_bar/app_bar.dart';
+import 'package:convo_pro/statics/app_statics.dart';
 import 'package:convo_pro/widgets/core/headers/app_header.dart';
 import 'package:convo_pro/widgets/design/buttons/app_button/app_button.dart';
+import 'package:convo_pro/widgets/design/checkboxes/app_checkbox/app_checkbox.dart';
 import 'package:convo_pro/widgets/design/textfields/app_textfield/app_textfield.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+// import 'package:flutter_svg/svg.dart';
+
 import 'package:provider/provider.dart';
 
 part 'widgets/_body.dart';
@@ -16,8 +19,8 @@ part '_state.dart';
 part 'static/_form_data.dart';
 part 'static/_form_keys.dart';
 
-class ForgotPasswordScreen extends StatelessWidget {
-  const ForgotPasswordScreen({super.key});
+class CreateAccountScreen extends StatelessWidget {
+  const CreateAccountScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
