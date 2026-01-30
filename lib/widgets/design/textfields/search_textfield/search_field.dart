@@ -13,7 +13,7 @@ class SearchField extends StatefulWidget {
   final String? hint;
   final bool? enabled;
   final bool readOnly;
-  final Widget? prefixIcon;
+  final Widget? suffixIcon;
   final String? initialValue;
   final TextInputType? textInputType;
   final String? errorText;
@@ -33,7 +33,7 @@ class SearchField extends StatefulWidget {
     this.controller,
     this.enabled,
     this.initialValue,
-    this.prefixIcon,
+    this.suffixIcon,
     required this.name,
     this.hint,
     this.readOnly = false,
@@ -48,7 +48,7 @@ class SearchField extends StatefulWidget {
     this.iconColor,
     this.borderRadius,
     this.borderColor,
-    this.hasShadow = true,
+    this.hasShadow = false,
   });
 
   @override
@@ -96,7 +96,7 @@ class SearchFieldState extends State<SearchField> {
           controller: widget.controller,
           inputFormatters: widget.inputformatters,
           focusNode: _focusNode,
-          style: AppText.b2!.copyWith(color: textColor),
+          style: AppText.inter.b2!.copyWith(color: textColor),
           cursorColor: textColor,
           enabled: widget.enabled ?? true,
           initialValue: widget.initialValue,
@@ -108,50 +108,50 @@ class SearchFieldState extends State<SearchField> {
           },
           decoration: InputDecoration(
             errorText: widget.errorText,
-            prefixIcon: Padding(
+            suffixIcon: Padding(
               padding: EdgeInsets.only(
                 left: 16.w,
-                right: 8.w,
+                right: 16.w,
                 top: 0,
                 bottom: 0,
               ),
               child:
-                  widget.prefixIcon ??
+                  widget.suffixIcon ??
                   SvgPicture.asset(
-                    'assets/svgs/search-normal.svg',
-                    width: 20.w,
-                    height: 20.h,
+                    'assets/svgs/search.svg',
+                    width: 24.w,
+                    height: 24.h,
                     colorFilter: ColorFilter.mode(
-                      widget.iconColor ?? AppTheme.c.text.shade800!,
+                      widget.iconColor ?? AppTheme.c.text.main!,
                       BlendMode.srcIn,
                     ),
                   ),
             ),
-            prefixIconConstraints: BoxConstraints(
-              minWidth: 21.w,
-              minHeight: 21.h,
+            suffixIconConstraints: BoxConstraints(
+              minWidth: 24.w,
+              minHeight: 24.h,
             ),
             filled: true,
             fillColor: widget.fillColor ?? AppTheme.c.white,
 
             contentPadding: EdgeInsets.symmetric(
               horizontal: 16.w,
-              vertical: 16.5.h,
+              vertical: 12.h,
             ),
             hintText: widget.hint ?? 'Search',
-            hintStyle: AppText.b2!.cl(AppTheme.c.text.main!),
+            hintStyle: AppText.inter.b2!.cl(AppTheme.c.text.main!),
             enabledBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(widget.borderRadius ?? 12.r),
               borderSide: BorderSide(
                 width: 1.w,
-                color: widget.borderColor ?? AppTheme.c.lightGrey.main!,
+                color: widget.borderColor ?? Colors.transparent,
               ),
             ),
             focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(widget.borderRadius ?? 12.r),
               borderSide: BorderSide(
                 width: 1.w,
-                color: widget.borderColor ?? AppTheme.c.lightGrey.main!,
+                color: widget.borderColor ?? Colors.transparent,
               ),
             ),
             errorBorder: OutlineInputBorder(

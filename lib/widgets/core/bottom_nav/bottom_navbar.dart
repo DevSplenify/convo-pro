@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/screens/home/home.dart';
 import 'package:flutter/material.dart';
@@ -30,28 +32,32 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
       bottomNavigationBar: Padding(
         padding: EdgeInsets.fromLTRB(16.w, 0, 16.w, bottomInset + 12.h),
         child: ClipRRect(
-          borderRadius: BorderRadius.circular(32.r),
-          child: Container(
-            padding: EdgeInsets.symmetric(vertical: 14.5.h, horizontal: 16.w),
-            decoration: BoxDecoration(
-              color: const Color(0xFF1E1E22),
-              borderRadius: BorderRadius.circular(24.r),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: List.generate(navItems.length, (index) {
-                final item = navItems[index];
-                final isSelected = _currentIndex == index;
+          borderRadius: BorderRadius.circular(24.r),
+          child: BackdropFilter(
+            filter: ImageFilter.blur(sigmaX: 17.4, sigmaY: 17.4),
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 14.5.h, horizontal: 16.w),
+              decoration: BoxDecoration(
+                color: AppTheme.c.black!,
+                borderRadius: BorderRadius.circular(24.r),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: List.generate(navItems.length, (index) {
+                  final item = navItems[index];
+                  final isSelected = _currentIndex == index;
 
-                return GestureDetector(
-                  onTap: () => _onTabTap(index),
-                  child: _NavItem(
-                    item: item,
-                    isSelected: isSelected,
-                    index: index,
-                  ),
-                );
-              }),
+                  return GestureDetector(
+                    onTap: () => _onTabTap(index),
+                    behavior: HitTestBehavior.translucent,
+                    child: _NavItem(
+                      item: item,
+                      isSelected: isSelected,
+                      index: index,
+                    ),
+                  );
+                }),
+              ),
             ),
           ),
         ),
@@ -71,6 +77,7 @@ class _NavItem extends StatelessWidget {
     required this.index,
   });
 
+  @override
   @override
   Widget build(BuildContext context) {
     final color = isSelected ? AppTheme.c.primary.main : AppTheme.c.white;
@@ -93,7 +100,9 @@ class _NavItem extends StatelessWidget {
           )
         else
           SvgPicture.asset(
-            item.icon,
+            (index == 0 && isSelected && item.selectedIcon != null)
+                ? item.selectedIcon!
+                : item.icon,
             height: 24.h,
             colorFilter: ColorFilter.mode(color!, BlendMode.srcIn),
           ),

@@ -9,6 +9,7 @@ class RoundedLinearProgress extends StatelessWidget {
   final Color valueColor;
   final double borderRadius;
   final Duration duration;
+  final bool hasBorder;
 
   const RoundedLinearProgress({
     super.key,
@@ -18,6 +19,7 @@ class RoundedLinearProgress extends StatelessWidget {
     required this.valueColor,
     this.borderRadius = 40,
     this.duration = const Duration(milliseconds: 300),
+    this.hasBorder = true,
   });
 
   @override
@@ -33,7 +35,9 @@ class RoundedLinearProgress extends StatelessWidget {
             height: height,
             decoration: BoxDecoration(
               color: backgroundColor,
-              border: Border.all(color: AppTheme.c.lightGrey.main!),
+              border: hasBorder
+                  ? Border.all(color: AppTheme.c.lightGrey.main!)
+                  : null,
               borderRadius: BorderRadius.circular(borderRadius.r),
             ),
             alignment: Alignment.centerLeft,
@@ -44,7 +48,7 @@ class RoundedLinearProgress extends StatelessWidget {
               decoration: BoxDecoration(
                 color: valueColor,
                 borderRadius: BorderRadius.circular(borderRadius.r),
-                border: Border.all(color: valueColor),
+                border: hasBorder ? Border.all(color: valueColor) : null,
               ),
             ),
           ),

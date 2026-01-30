@@ -59,33 +59,38 @@ class _UserHeader extends StatelessWidget {
             ],
           ),
           Space.xm!,
-          Stack(
-            clipBehavior: Clip.none,
-            alignment: AlignmentGeometry.center,
-            children: [
-              SvgPicture.asset(
-                'assets/svgs/notification.svg',
-                width: 32.w,
-                height: 32.h,
-              ),
-              Positioned(
-                right: -4,
+          GestureDetector(
+            onTap: () {
+              AppRoutes.notifications.push(context);
+            },
+            child: Stack(
+              clipBehavior: Clip.none,
+              alignment: AlignmentGeometry.center,
+              children: [
+                SvgPicture.asset(
+                  'assets/svgs/notification.svg',
+                  width: 32.w,
+                  height: 32.h,
+                ),
+                Positioned(
+                  right: -4,
 
-                child: Container(
-                  padding: Space.all(7.5, 1),
-                  decoration: BoxDecoration(
-                    color: AppTheme.c.error.main,
-                    shape: BoxShape.circle,
-                  ),
-                  child: Center(
-                    child: Text(
-                      '3',
-                      style: AppText.inter.l2b!.cl(AppTheme.c.white!),
+                  child: Container(
+                    padding: Space.all(7.5, 1),
+                    decoration: BoxDecoration(
+                      color: AppTheme.c.error.main,
+                      shape: BoxShape.circle,
+                    ),
+                    child: Center(
+                      child: Text(
+                        '3',
+                        style: AppText.inter.l2b!.cl(AppTheme.c.white!),
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ],
       ),

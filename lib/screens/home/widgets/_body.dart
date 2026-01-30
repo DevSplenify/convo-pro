@@ -9,7 +9,163 @@ class _Body extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppTheme.c.background.main,
       extendBody: false,
-      body: Column(children: [_UserHeader()]),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          _UserHeader(),
+          Space.yf(16),
+          Expanded(
+            child: SingleChildScrollView(
+              padding: Space.hf(24).copyWith(bottom: 150.h),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('Quick Links', style: AppText.b1b),
+                  Space.yf(12),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: _buildQuickActions(
+                          'Conversation Templates',
+                          'assets/svgs/templets.svg',
+                          () {
+                            AppRoutes.convoTemplates.push(context);
+                          },
+                        ),
+                      ),
+                      Space.xf(8),
+                      Expanded(
+                        child: _buildQuickActions(
+                          'Your Mood Tracker',
+                          'assets/svgs/smile.svg',
+                          () {
+                            // AppRoutes.moodTracker.push(context);
+                          },
+                        ),
+                      ),
+                    ],
+                  ),
+                  Space.yf(8),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Expanded(
+                        child: _buildQuickActions(
+                          'AI Conversation Assistant',
+                          'assets/svgs/bot.svg',
+                          () {},
+                        ),
+                      ),
+                      Space.xf(8),
+                      Expanded(
+                        child: _buildQuickActions(
+                          'Your Friends List',
+                          'assets/svgs/user_W.svg',
+                          () {},
+                        ),
+                      ),
+                    ],
+                  ),
+                  Space.yf(24),
+                  Text('Weekly Mood Trends', style: AppText.b1b),
+                  Space.yf(12),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: _buildMoodTrends(
+                          'Confidence Level',
+                          40,
+                          'Slightly Low',
+                          'Monday',
+                          AppTheme.c.accent.yellow!,
+                          'assets/svgs/confidence.svg',
+                          AppTheme.c.accent.yellowLight!,
+                        ),
+                      ),
+                      Space.xf(10),
+                      Expanded(
+                        child: _buildMoodTrends(
+                          'Social Energy',
+                          80,
+                          'High',
+                          'Friday',
+                          AppTheme.c.accent.purple!,
+                          'assets/svgs/time.svg',
+                          AppTheme.c.accent.purpleLight!,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Space.yf(24),
+                  Container(
+                    padding: Space.all(8, 16),
+                    decoration: BoxDecoration(
+                      color: AppTheme.c.white,
+                      borderRadius: UIProps.buttonRadius,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Therapeutic Short Courses', style: AppText.b1b),
+                        Space.yf(12),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: _buildTherapeuticCoursesItem(
+                                '(ACT) Acceptance Commitment Therapy',
+                                AppTheme.c.black!,
+                                AppTheme.c.accent.purple!,
+                                () {
+                                  // AppRoutes.anxietyCourse.push(context);
+                                },
+                              ),
+                            ),
+                            Space.xf(8),
+                            Expanded(
+                              child: _buildTherapeuticCoursesItem(
+                                'Cognitive Behavioural Therapy',
+                                AppTheme.c.white!,
+                                AppTheme.c.accent.yellow!,
+                                () {
+                                  // AppRoutes.confidenceCourse.push(context);
+                                },
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                  Space.yf(24),
+                  Text('Courses Progress', style: AppText.b1b),
+                  Space.yf(12),
+                  _buildCoursesProgressCard(),
+                  Space.yf(24),
+                  Text('AI Recommendations', style: AppText.b1b),
+                  Space.yf(12),
+                  ListView.separated(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    padding: Space.z!,
+                    itemBuilder: (context, index) {
+                      return AiRecommendations(
+                        title: 'Journaling for Mental Health',
+                        subtitle: 'Discover the benefits of daily journaling',
+                        onTap: () {
+                          // Handle tap
+                        },
+                      );
+                    },
+                    separatorBuilder: (context, index) => Space.yf(12),
+                    itemCount: 5,
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

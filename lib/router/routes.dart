@@ -8,4 +8,12 @@ abstract class AppRoutes {
   static const resetPassword = '/reset-password';
   static const termsConditions = '/terms-conditions';
   static const bottomNavbar = '/bottom-navbar';
+  static const notifications = '/notifications';
+  static const convoTemplates = '/convo-templates';
+  static const categoryTemplates = '/category-templates';
+  static const detailedConvoTemplates = '/detailed-convo-templates';
+  static const cbt = '/cbt';
+  static const act = '/act';
+  static const detailAudioSession = '/detail-audio-session';
+  static const detailTextSession = '/detail-text-session';
 }

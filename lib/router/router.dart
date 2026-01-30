@@ -1,7 +1,15 @@
 import 'package:convo_pro/router/routes.dart';
+import 'package:convo_pro/screens/act/act.dart';
+import 'package:convo_pro/screens/category_templates/category_templates.dart';
+import 'package:convo_pro/screens/cbt/cbt.dart';
+import 'package:convo_pro/screens/convo_templates/convo_templates.dart';
 import 'package:convo_pro/screens/create_account/create_account.dart';
+import 'package:convo_pro/screens/detail_audio_session/detail_audio_session.dart';
+import 'package:convo_pro/screens/detail_text_session/detail_text_session.dart';
+import 'package:convo_pro/screens/detailed_convo_templates/detailed_convo_templates.dart';
 import 'package:convo_pro/screens/forgot_password/forgot_password.dart';
 import 'package:convo_pro/screens/link_sent/link_sent.dart';
+import 'package:convo_pro/screens/notifications/notifications.dart';
 import 'package:convo_pro/screens/onboarding/onboarding.dart';
 import 'package:convo_pro/screens/reset_password/reset_password.dart';
 import 'package:convo_pro/screens/sign_in/sign_in.dart';
@@ -20,6 +28,14 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.resetPassword: (_) => const ResetPasswordScreen(),
   AppRoutes.termsConditions: (_) => const TermsConditionsScreen(),
   AppRoutes.bottomNavbar: (_) => const CustomBottomNavBar(),
+  AppRoutes.notifications: (_) => const NotificationsScreen(),
+  AppRoutes.convoTemplates: (_) => const ConvoTemplatesScreen(),
+  AppRoutes.categoryTemplates: (_) => const CategoryTemplatesScreen(),
+  AppRoutes.detailedConvoTemplates: (_) => const DetailedConvoTemplatesScreen(),
+  AppRoutes.cbt: (_) => const CbtScreen(),
+  AppRoutes.act: (_) => const ActScreen(),
+  AppRoutes.detailAudioSession: (_) => const DetailAudioSessionScreen(),
+  AppRoutes.detailTextSession: (_) => const DetailTextSessionScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

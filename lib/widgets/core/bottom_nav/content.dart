@@ -2,16 +2,23 @@ part of 'bottom_navbar.dart';
 
 class NavItem {
   final String label;
-  final String icon;
+  final String icon; // default / unselected
+  final String? selectedIcon; // ONLY for items that need it
   final Widget screen;
 
-  NavItem({required this.label, required this.icon, required this.screen});
+  NavItem({
+    required this.label,
+    required this.icon,
+    this.selectedIcon,
+    required this.screen,
+  });
 }
 
 final List<NavItem> navItems = [
   NavItem(
     label: 'Home',
     icon: 'assets/svgs/home.svg',
+    selectedIcon: 'assets/svgs/home_selected.svg',
     screen: const HomeScreen(),
   ),
   NavItem(
