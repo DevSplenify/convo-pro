@@ -7,7 +7,11 @@ import 'package:convo_pro/screens/create_account/create_account.dart';
 import 'package:convo_pro/screens/detail_audio_session/detail_audio_session.dart';
 import 'package:convo_pro/screens/detail_text_session/detail_text_session.dart';
 import 'package:convo_pro/screens/detailed_convo_templates/detailed_convo_templates.dart';
+import 'package:convo_pro/screens/favourites/favourites.dart';
 import 'package:convo_pro/screens/forgot_password/forgot_password.dart';
+import 'package:convo_pro/screens/friend_request/friend_request.dart';
+import 'package:convo_pro/screens/friends_list/friends_list.dart';
+import 'package:convo_pro/screens/invite_friends/invite_friends.dart';
 import 'package:convo_pro/screens/link_sent/link_sent.dart';
 import 'package:convo_pro/screens/notifications/notifications.dart';
 import 'package:convo_pro/screens/onboarding/onboarding.dart';
@@ -36,6 +40,10 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.act: (_) => const ActScreen(),
   AppRoutes.detailAudioSession: (_) => const DetailAudioSessionScreen(),
   AppRoutes.detailTextSession: (_) => const DetailTextSessionScreen(),
+  AppRoutes.friendsList: (_) => const FriendsListScreen(),
+  AppRoutes.friendRequest: (_) => const FriendRequestScreen(),
+  AppRoutes.inviteFriends: (_) => const InviteFriendsScreen(),
+  AppRoutes.favourites: (_) => const FavouritesScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

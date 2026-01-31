@@ -11,10 +11,15 @@ class _Body extends StatelessWidget {
         type: AppBarType.withWidget,
         title: 'Convo Templates',
         space: 16,
-        trailingWidget: SvgPicture.asset(
-          'assets/svgs/heart.svg',
-          width: 20.w,
-          height: 20.h,
+        trailingWidget: GestureDetector(
+          onTap: () {
+            AppRoutes.favourites.push(context);
+          },
+          child: SvgPicture.asset(
+            'assets/svgs/heart.svg',
+            width: 20.w,
+            height: 20.h,
+          ),
         ),
       ),
       body: SingleChildScrollView(
@@ -28,6 +33,26 @@ class _Body extends StatelessWidget {
           children: [
             SearchField(name: 'Search Templates', hint: 'Search Categories'),
             Space.yf(16),
+            ListView.separated(
+              physics: NeverScrollableScrollPhysics(),
+              shrinkWrap: true,
+              itemCount: convoTemplates.length,
+              separatorBuilder: (_, _) => Space.yf(16),
+              itemBuilder: (context, index) {
+                final item = convoTemplates[index];
+                return TemplatesCategoriesCard(
+                  title: item['title']!,
+                  subtitle: item['subtitle']!,
+                  image: item['image']!,
+                  onTap: () {
+                    AppRoutes.categoryTemplates.push(
+                      context,
+                      arguments: item['title'],
+                    );
+                  },
+                );
+              },
+            ),
           ],
         ),
       ),

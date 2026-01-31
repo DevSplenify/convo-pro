@@ -74,12 +74,7 @@ abstract class UIProps {
 
   static void initShadows() {
     cardShadow = [
-      BoxShadow(
-        color: AppTheme.c.text.shade800!.withValues(alpha: 0.03),
-        blurRadius: 22.7,
-        spreadRadius: 0,
-        offset: Offset(0, 4),
-      ),
+      BoxShadow(color: Color(0x0D3F3C36), blurRadius: 16, offset: Offset(0, 8)),
     ];
     buttonShadow = [
       BoxShadow(

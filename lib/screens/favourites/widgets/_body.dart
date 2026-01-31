@@ -1,14 +1,16 @@
-part of '../category_templates.dart';
+part of '../favourites.dart';
 
 class _Body extends StatelessWidget {
-  final String title;
-  const _Body({required this.title});
+  const _Body();
 
   @override
   Widget build(BuildContext context) {
     _ScreenState.s(context, true);
     return Scaffold(
-      appBar: CustomAppBar(type: AppBarType.withText, title: title),
+      appBar: const CustomAppBar(
+        type: AppBarType.withText,
+        title: 'Favourites',
+      ),
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
           left: 24.w,
@@ -18,7 +20,7 @@ class _Body extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SearchField(name: 'Search Templates', hint: 'Search Templates'),
+            SearchField(name: 'Search Favorites', hint: 'Search Favorites'),
             Space.yf(16),
             ListView.separated(
               shrinkWrap: true,
@@ -33,7 +35,7 @@ class _Body extends StatelessWidget {
                   description: item['description'],
                   category: item['category'],
                   tag: item['tag'],
-                  isInitiallyFavorite: item['isInitiallyFavorite'],
+                  isInitiallyFavorite: true,
                 );
               },
             ),

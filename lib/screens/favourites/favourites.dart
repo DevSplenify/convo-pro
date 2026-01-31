@@ -10,17 +10,16 @@ part 'widgets/_body.dart';
 part '_state.dart';
 part 'data.dart';
 
-class CategoryTemplatesScreen extends StatelessWidget {
-  const CategoryTemplatesScreen({super.key});
+class FavouritesScreen extends StatelessWidget {
+  const FavouritesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     App.init(context);
-    final String title = ModalRoute.of(context)?.settings.arguments as String;
 
     return ChangeNotifierProvider<_ScreenState>(
       create: (_) => _ScreenState(),
-      child: _Body(title: title),
+      child: const _Body(),
     );
   }
 }

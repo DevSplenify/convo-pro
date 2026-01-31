@@ -16,4 +16,8 @@ abstract class AppRoutes {
   static const act = '/act';
   static const detailAudioSession = '/detail-audio-session';
   static const detailTextSession = '/detail-text-session';
+  static const friendsList = '/friends-list';
+  static const friendRequest = '/friend-request';
+  static const inviteFriends = '/invite-friends';
+  static const favourites = '/favourites';
 }

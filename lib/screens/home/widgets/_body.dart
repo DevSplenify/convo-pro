@@ -62,7 +62,9 @@ class _Body extends StatelessWidget {
                         child: _buildQuickActions(
                           'Your Friends List',
                           'assets/svgs/user_W.svg',
-                          () {},
+                          () {
+                            AppRoutes.friendsList.push(context);
+                          },
                         ),
                       ),
                     ],
