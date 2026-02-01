@@ -20,4 +20,5 @@ abstract class AppRoutes {
   static const friendRequest = '/friend-request';
   static const inviteFriends = '/invite-friends';
   static const favourites = '/favourites';
+  static const friendsProfile = '/friends-profile';
 }

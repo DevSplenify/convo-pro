@@ -36,6 +36,9 @@ class _Body extends StatelessWidget {
                   category: item['category'],
                   tag: item['tag'],
                   isInitiallyFavorite: true,
+                  onTap: () {
+                    AppRoutes.detailedConvoTemplates.push(context);
+                  },
                 );
               },
             ),

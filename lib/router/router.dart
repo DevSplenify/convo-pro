@@ -9,6 +9,7 @@ import 'package:convo_pro/screens/detail_text_session/detail_text_session.dart';
 import 'package:convo_pro/screens/detailed_convo_templates/detailed_convo_templates.dart';
 import 'package:convo_pro/screens/favourites/favourites.dart';
 import 'package:convo_pro/screens/forgot_password/forgot_password.dart';
+import 'package:convo_pro/screens/friends_profile/friends_profile.dart';
 import 'package:convo_pro/screens/friend_request/friend_request.dart';
 import 'package:convo_pro/screens/friends_list/friends_list.dart';
 import 'package:convo_pro/screens/invite_friends/invite_friends.dart';
@@ -44,6 +45,7 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.friendRequest: (_) => const FriendRequestScreen(),
   AppRoutes.inviteFriends: (_) => const InviteFriendsScreen(),
   AppRoutes.favourites: (_) => const FavouritesScreen(),
+  AppRoutes.friendsProfile: (_) => const FriendsProfileScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

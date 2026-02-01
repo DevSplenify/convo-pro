@@ -21,7 +21,7 @@ class _Body extends StatelessWidget {
               padding: Space.all(16, 45),
               decoration: BoxDecoration(
                 color: AppTheme.c.background.shade200,
-                borderRadius: BorderRadius.circular(12.r),
+                borderRadius: UIProps.buttonRadius,
                 border: Border.all(
                   color: AppTheme.c.lightGrey.main!,
                   width: 1.w,
@@ -29,44 +29,42 @@ class _Body extends StatelessWidget {
               ),
               child: Column(
                 children: [
-                  SvgPicture.asset(
-                    'assets/svgs/invite.svg',
-                    width: 86.5.w,
-                    height: 86.5.w,
-                  ),
-                  Space.yf(24),
+                  Image.asset('assets/pngs/Group.png', width: 165.5.h),
+                  // Space.yf(24),
                   Text(
-                    'Invite friends to\n use Nureo',
-                    style: AppText.h3bm!.w(6),
+                    'Invite your friends',
+                    style: AppText.h4bm!,
                     textAlign: TextAlign.center,
                   ),
-                  Space.yf(8),
+                  Space.yf(4),
                   Text(
-                    'Invite your friends to join the Nureo app and enjoy a healthier lifestyle together!',
+                    'Invite your friends to join the Convo Pro app',
                     textAlign: TextAlign.center,
-                    style: AppText.b2!.cl(AppTheme.c.text.main!),
+                    style: AppText.inter.b2!,
                   ),
                   Space.yf(24),
                   GestureDetector(
                     onTap: () {},
                     child: Container(
-                      padding: Space.all(18, 17.5),
+                      padding: Space.all(18, 16),
                       decoration: BoxDecoration(
                         color: AppTheme.c.primary.main!,
-                        borderRadius: BorderRadius.circular(100.r),
+                        borderRadius: UIProps.buttonRadius,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text('Invite/.Nureo./app', style: AppText.b1bm!.w(6)),
+                          Text(
+                            'invite./convopro./app',
+                            style: AppText.inter.b2!.cl(AppTheme.c.white!),
+                          ),
                           Text(
                             'Copy',
-                            style: AppText.b1bm!
-                                .w(6)
-                                .copyWith(
-                                  decoration: TextDecoration.underline,
-                                  decorationColor: AppTheme.c.text.shade800!,
-                                ),
+                            style: AppText.inter.b2b!.copyWith(
+                              decoration: TextDecoration.underline,
+                              decorationColor: AppTheme.c.white!,
+                              color: AppTheme.c.white!,
+                            ),
                           ),
                         ],
                       ),

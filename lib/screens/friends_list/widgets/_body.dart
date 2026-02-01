@@ -8,6 +8,16 @@ class _Body extends StatelessWidget {
     _ScreenState.s(context, true);
     return Scaffold(
       appBar: CustomAppBar(title: 'Friends List', type: AppBarType.withText),
+      floatingActionButton: Padding(
+        padding: Space.hf(20),
+        child: AppButton(
+          label: 'Invite New Friend',
+          onPressed: () {
+            AppRoutes.inviteFriends.push(context);
+          },
+        ),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
 
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
@@ -44,7 +54,7 @@ class _Body extends StatelessWidget {
                   streakCount: 7,
                   avatarUrl: 'assets/pngs/pp.png',
                   onTap: () {
-                    // AppRoutes.friendsProfile.push(context);
+                    AppRoutes.friendsProfile.push(context);
                   },
                 );
               },

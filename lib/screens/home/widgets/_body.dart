@@ -119,7 +119,7 @@ class _Body extends StatelessWidget {
                                 AppTheme.c.black!,
                                 AppTheme.c.accent.purple!,
                                 () {
-                                  // AppRoutes.anxietyCourse.push(context);
+                                  AppRoutes.act.push(context);
                                 },
                               ),
                             ),
@@ -130,7 +130,7 @@ class _Body extends StatelessWidget {
                                 AppTheme.c.white!,
                                 AppTheme.c.accent.yellow!,
                                 () {
-                                  // AppRoutes.confidenceCourse.push(context);
+                                  AppRoutes.cbt.push(context);
                                 },
                               ),
                             ),

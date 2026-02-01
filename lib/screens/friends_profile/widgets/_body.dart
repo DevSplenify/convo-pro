@@ -1,25 +1,48 @@
-part of '../category_templates.dart';
+part of '../friends_profile.dart';
 
 class _Body extends StatelessWidget {
-  final String title;
-  const _Body({required this.title});
+  const _Body();
 
   @override
   Widget build(BuildContext context) {
     _ScreenState.s(context, true);
     return Scaffold(
-      appBar: CustomAppBar(type: AppBarType.withText, title: title),
+      appBar: const CustomAppBar(
+        type: AppBarType.withText,
+        title: 'Albert profile',
+      ),
       body: SingleChildScrollView(
         padding: EdgeInsets.only(
+          top: 16.h,
           left: 24.w,
           right: 24.w,
-          top: 16.h,
           bottom: MediaQuery.of(context).padding.bottom + 10.h,
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            SearchField(name: 'Search Templates', hint: 'Search Templates'),
+            CircleAvatar(
+              radius: 40.r,
+              backgroundImage: const AssetImage('assets/pngs/pp.png'),
+            ),
+            Space.yf(12),
+            Text('Albert Flores', style: AppText.inter.b2b!.w(6)),
+            Space.yf(2),
+            Text(
+              'albert@gmail.com',
+              style: AppText.inter.b2!.copyWith(color: AppTheme.c.text.main),
+            ),
             Space.yf(16),
+            Row(
+              children: [
+                Text(
+                  'Used Templates',
+                  style: AppText.b1bm!,
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+            Space.yf(12),
             ListView.separated(
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
