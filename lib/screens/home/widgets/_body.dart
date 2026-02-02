@@ -40,7 +40,7 @@ class _Body extends StatelessWidget {
                           'Your Mood Tracker',
                           'assets/svgs/smile.svg',
                           () {
-                            // AppRoutes.moodTracker.push(context);
+                            AppRoutes.moodTracker.push(context);
                           },
                         ),
                       ),
@@ -75,7 +75,7 @@ class _Body extends StatelessWidget {
                   Row(
                     children: [
                       Expanded(
-                        child: _buildMoodTrends(
+                        child: buildMoodTrends(
                           'Confidence Level',
                           40,
                           'Slightly Low',
@@ -87,7 +87,7 @@ class _Body extends StatelessWidget {
                       ),
                       Space.xf(10),
                       Expanded(
-                        child: _buildMoodTrends(
+                        child: buildMoodTrends(
                           'Social Energy',
                           80,
                           'High',

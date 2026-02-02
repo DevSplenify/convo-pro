@@ -36,8 +36,8 @@ class SeeAllHeading extends StatelessWidget {
         children: [
           Text(
             title,
-            style: AppText.b1bm!
-                .w(fontWeight ?? 5)
+            style: AppText.inter.b1b!
+                .w(fontWeight ?? 7)
                 .copyWith(
                   fontSize: fontSize,
                   letterSpacing: 0,

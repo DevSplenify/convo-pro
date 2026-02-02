@@ -21,4 +21,12 @@ abstract class AppRoutes {
   static const inviteFriends = '/invite-friends';
   static const favourites = '/favourites';
   static const friendsProfile = '/friends-profile';
+  static const moodTracker = '/mood-tracker';
+  static const trends = '/trends';
+  static const createLog = '/create-log';
+  static const triggers = '/triggers';
+  static const detailedRecentLogs = '/detailed-recent-logs';
+  static const addTrigger = '/add-trigger';
+  static const editTrigger = '/edit-trigger';
+  static const triggerDetails = '/trigger-details';
 }

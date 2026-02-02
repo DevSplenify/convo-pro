@@ -1,25 +1,33 @@
 import 'package:convo_pro/router/routes.dart';
 import 'package:convo_pro/screens/act/act.dart';
+import 'package:convo_pro/screens/add_trigger/add_trigger.dart';
 import 'package:convo_pro/screens/category_templates/category_templates.dart';
 import 'package:convo_pro/screens/cbt/cbt.dart';
 import 'package:convo_pro/screens/convo_templates/convo_templates.dart';
 import 'package:convo_pro/screens/create_account/create_account.dart';
+import 'package:convo_pro/screens/create_log/create_log.dart';
 import 'package:convo_pro/screens/detail_audio_session/detail_audio_session.dart';
 import 'package:convo_pro/screens/detail_text_session/detail_text_session.dart';
 import 'package:convo_pro/screens/detailed_convo_templates/detailed_convo_templates.dart';
+import 'package:convo_pro/screens/detailed_recent_logs/detailed_recent_logs.dart';
+import 'package:convo_pro/screens/edit_trigger/edit_trigger.dart';
 import 'package:convo_pro/screens/favourites/favourites.dart';
 import 'package:convo_pro/screens/forgot_password/forgot_password.dart';
-import 'package:convo_pro/screens/friends_profile/friends_profile.dart';
 import 'package:convo_pro/screens/friend_request/friend_request.dart';
 import 'package:convo_pro/screens/friends_list/friends_list.dart';
+import 'package:convo_pro/screens/friends_profile/friends_profile.dart';
 import 'package:convo_pro/screens/invite_friends/invite_friends.dart';
 import 'package:convo_pro/screens/link_sent/link_sent.dart';
+import 'package:convo_pro/screens/mood_tracker/mood_tracker.dart';
 import 'package:convo_pro/screens/notifications/notifications.dart';
 import 'package:convo_pro/screens/onboarding/onboarding.dart';
 import 'package:convo_pro/screens/reset_password/reset_password.dart';
 import 'package:convo_pro/screens/sign_in/sign_in.dart';
 import 'package:convo_pro/screens/splash/splash.dart';
 import 'package:convo_pro/screens/terms_conditions/terms_conditions.dart';
+import 'package:convo_pro/screens/trends/trends.dart';
+import 'package:convo_pro/screens/trigger_details/trigger_details.dart';
+import 'package:convo_pro/screens/triggers/triggers.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -46,6 +54,14 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.inviteFriends: (_) => const InviteFriendsScreen(),
   AppRoutes.favourites: (_) => const FavouritesScreen(),
   AppRoutes.friendsProfile: (_) => const FriendsProfileScreen(),
+  AppRoutes.moodTracker: (_) => const MoodTrackerScreen(),
+  AppRoutes.trends: (_) => const TrendsScreen(),
+  AppRoutes.createLog: (_) => const CreateLogScreen(),
+  AppRoutes.triggers: (_) => const TriggersScreen(),
+  AppRoutes.detailedRecentLogs: (_) => const DetailedRecentLogsScreen(),
+  AppRoutes.addTrigger: (_) => const AddTriggerScreen(),
+  AppRoutes.editTrigger: (_) => const EditTriggerScreen(),
+  AppRoutes.triggerDetails: (_) => const TriggerDetailsScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

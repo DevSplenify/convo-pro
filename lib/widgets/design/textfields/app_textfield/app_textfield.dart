@@ -134,7 +134,7 @@ class AppTextFieldState extends State<AppTextField> {
             children: [
               Text(
                 widget.label!,
-                style: widget.labelStyle ?? AppText.b2b!.w(6),
+                style: widget.labelStyle ?? AppText.inter.b2b!.w(6),
               ),
               if (widget.labelHelperText != null) ...[
                 Space.xf(4),

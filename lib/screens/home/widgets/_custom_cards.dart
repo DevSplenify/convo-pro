@@ -42,7 +42,7 @@ Widget _buildQuickActions(String title, String svgPath, VoidCallback onTap) {
 //// Custom card for Mood Trends
 ///
 /// //////////////////////////////////
-Widget _buildMoodTrends(
+Widget buildMoodTrends(
   String title,
   int value,
   String average,
