@@ -26,19 +26,19 @@ class _Body extends StatelessWidget {
         ),
         child: Column(
           children: [
-            DeatilsHeadings(
+            DetailsHeadings(
               title: 'Overview',
               subtitle:
                   'There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour. There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour.',
             ),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               title: 'Main Concept',
               subtitle:
                   'There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour. There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour.',
             ),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               title: 'Climax',
               subtitle:
                   'There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour. There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour.',

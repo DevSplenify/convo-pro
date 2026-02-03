@@ -28,7 +28,7 @@ class _Body extends StatelessWidget {
               'assets/svgs/happy.svg',
             ),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               title: 'Your Notes',
               subtitle:
                   'There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour. There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour.\n\nThere are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour. There are many variations of passages of Lorem  Ipsum available, but the majority have suffered  alteration in some form, by injected humour.',

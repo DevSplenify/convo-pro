@@ -29,7 +29,7 @@ final List<NavItem> navItems = [
   NavItem(
     label: 'Mindfulness',
     icon: 'assets/svgs/brain.svg',
-    screen: const Screen3(),
+    screen: const MindfulnessScreen(),
   ),
   NavItem(
     label: 'Education',
@@ -39,6 +39,6 @@ final List<NavItem> navItems = [
   NavItem(
     label: 'Profile',
     icon: 'assets/pngs/pp.png',
-    screen: const Screen5(),
+    screen: const ProfileScreen(),
   ),
 ];

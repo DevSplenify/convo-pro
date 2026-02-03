@@ -1,11 +1,11 @@
 import 'package:convo_pro/configs/configs.dart';
 import 'package:flutter/material.dart';
 
-class DeatilsHeadings extends StatelessWidget {
+class DetailsHeadings extends StatelessWidget {
   final String title;
   final String subtitle;
   final TextStyle? titleStyle;
-  const DeatilsHeadings({
+  const DetailsHeadings({
     super.key,
     required this.title,
     required this.subtitle,

@@ -29,4 +29,11 @@ abstract class AppRoutes {
   static const addTrigger = '/add-trigger';
   static const editTrigger = '/edit-trigger';
   static const triggerDetails = '/trigger-details';
+  static const exerciseDetails = '/exercise-details';
+  static const audioSessions = '/audio-sessions';
+  static const textSessions = '/text-sessions';
+  static const liveSession = '/live-session';
+  static const joinedLiveSession = '/joined-live-session';
+  static const courses = '/courses';
+  static const lessons = '/lessons';
 }

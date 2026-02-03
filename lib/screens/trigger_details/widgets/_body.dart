@@ -26,7 +26,16 @@ class _Body extends StatelessWidget {
             ),
             Space.xf(10),
             // Delete Icon
-            SvgPicture.asset('assets/svgs/bin.svg', width: 20.w, height: 20.h),
+            GestureDetector(
+              onTap: () {
+                showDeleteConfirmationBottomSheet(context);
+              },
+              child: SvgPicture.asset(
+                'assets/svgs/bin.svg',
+                width: 20.w,
+                height: 20.h,
+              ),
+            ),
           ],
         ),
       ),

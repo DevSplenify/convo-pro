@@ -1,18 +1,19 @@
 import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/router/routes.dart';
 import 'package:convo_pro/widgets/core/app_bar/app_bar.dart';
-import 'package:convo_pro/widgets/core/bottom_sheets/delete_confimation.dart';
-import 'package:convo_pro/widgets/design/chips/app_chips.dart';
+import 'package:convo_pro/widgets/design/cards/exercise_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
 
 part 'widgets/_body.dart';
 part '_state.dart';
+part 'widgets/_calendar.dart';
+part 'data.dart';
 
-class TriggerDetailsScreen extends StatelessWidget {
-  const TriggerDetailsScreen({super.key});
+class MindfulnessScreen extends StatelessWidget {
+  const MindfulnessScreen({super.key});
 
   @override
   Widget build(BuildContext context) {

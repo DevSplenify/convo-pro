@@ -85,7 +85,7 @@ class AppButton extends StatelessWidget {
           boxShadow: ButtonType.primary == buttonType && hasShadow
               ? [
                   BoxShadow(
-                    color: AppTheme.c.primary.main!.withOpacity(0.4),
+                    color: AppTheme.c.primary.main!.withValues(alpha: 0.4),
                     blurRadius: 8.r,
                     offset: Offset(0, 4.h),
                   ),

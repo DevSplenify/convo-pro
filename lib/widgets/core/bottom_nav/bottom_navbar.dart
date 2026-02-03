@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/screens/home/home.dart';
+import 'package:convo_pro/screens/mindfulness/mindfulness.dart';
+import 'package:convo_pro/screens/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';

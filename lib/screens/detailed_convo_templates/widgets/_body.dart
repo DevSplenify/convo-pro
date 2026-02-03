@@ -48,21 +48,21 @@ class _Body extends StatelessWidget {
             Space.yf(16),
             AppDivider(),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               titleStyle: AppText.inter.l1b,
               title: 'Introduction',
               subtitle:
                   'Hello [Recipient Name], I am reaching out to explore the possibility of a mutually beneficial sales partnership between our organizations. After reviewing your offerings and market presence, I believe there is strong potential for collaboration that could create value for both teams.',
             ),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               titleStyle: AppText.inter.l1b,
               title: 'Value Proposition',
               subtitle:
                   'Content: I believe a partnership between our organizations could mutually accelerate our goals. By integrating our [Your Product/Service] with your existing platform, we could help you reduce customer churn by 15% while opening up a new revenue channel for both of us.',
             ),
             Space.yf(16),
-            DeatilsHeadings(
+            DetailsHeadings(
               titleStyle: AppText.inter.l1b,
               title: 'Call To Action',
               subtitle:

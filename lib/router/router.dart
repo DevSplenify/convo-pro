@@ -28,6 +28,13 @@ import 'package:convo_pro/screens/terms_conditions/terms_conditions.dart';
 import 'package:convo_pro/screens/trends/trends.dart';
 import 'package:convo_pro/screens/trigger_details/trigger_details.dart';
 import 'package:convo_pro/screens/triggers/triggers.dart';
+import 'package:convo_pro/screens/exercise_details/exercise_details.dart';
+import 'package:convo_pro/screens/audio_sessions/audio_sessions.dart';
+import 'package:convo_pro/screens/text_sessions/text_sessions.dart';
+import 'package:convo_pro/screens/live_session/live_session.dart';
+import 'package:convo_pro/screens/joined_live_session/joined_live_session.dart';
+import 'package:convo_pro/screens/courses/courses.dart';
+import 'package:convo_pro/screens/lessons/lessons.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -62,6 +69,13 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.addTrigger: (_) => const AddTriggerScreen(),
   AppRoutes.editTrigger: (_) => const EditTriggerScreen(),
   AppRoutes.triggerDetails: (_) => const TriggerDetailsScreen(),
+  AppRoutes.exerciseDetails: (_) => const ExerciseDetailsScreen(),
+  AppRoutes.audioSessions: (_) => const AudioSessionsScreen(),
+  AppRoutes.textSessions: (_) => const TextSessionsScreen(),
+  AppRoutes.liveSession: (_) => const LiveSessionScreen(),
+  AppRoutes.joinedLiveSession: (_) => const JoinedLiveSessionScreen(),
+  AppRoutes.courses: (_) => const CoursesScreen(),
+  AppRoutes.lessons: (_) => const LessonsScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {
