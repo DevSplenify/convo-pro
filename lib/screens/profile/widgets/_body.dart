@@ -72,7 +72,9 @@ class _Body extends StatelessWidget {
             Space.yf(24),
             AppButton(
               label: 'Delete Account',
-              onPressed: () {},
+              onPressed: () {
+                showDeleteAccountBottomSheet(context, () {});
+              },
               buttonType: ButtonType.primaryWithIconLeft,
               iconPath: 'assets/svgs/bin.svg',
               iconColor: AppTheme.c.white,
@@ -81,7 +83,9 @@ class _Body extends StatelessWidget {
             Space.yf(12),
             AppButton(
               label: 'Logout',
-              onPressed: () {},
+              onPressed: () {
+                showLogoutBottomSheet(context, () {});
+              },
               buttonType: ButtonType.outlined,
               backgroundColor: AppTheme.c.background.main,
             ),

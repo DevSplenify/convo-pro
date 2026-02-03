@@ -1,14 +1,16 @@
 import 'package:convo_pro/configs/configs.dart';
+import 'package:convo_pro/widgets/core/headers/app_header.dart';
 import 'package:convo_pro/widgets/design/buttons/app_button/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/svg.dart';
 
 void showDeleteAccountBottomSheet(BuildContext context, VoidCallback onDelete) {
   showModalBottomSheet(
     isScrollControlled: true,
     context: context,
     shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.vertical(top: Radius.circular(24.r)),
+      borderRadius: BorderRadius.vertical(top: Radius.circular(32.r)),
     ),
     backgroundColor: AppTheme.c.white!,
     builder: (BuildContext context) {
@@ -26,7 +28,7 @@ void showDeleteAccountBottomSheet(BuildContext context, VoidCallback onDelete) {
                 decoration: BoxDecoration(
                   color: AppTheme.c.white!,
                   borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(24.r),
+                    top: Radius.circular(32.r),
                   ),
                 ),
 
@@ -36,58 +38,76 @@ void showDeleteAccountBottomSheet(BuildContext context, VoidCallback onDelete) {
                   padding: Space.hf(24),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
-                    crossAxisAlignment: CrossAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       // Handle bar
-                      Center(
-                        child: Container(
-                          margin: EdgeInsets.only(top: 8.h),
-                          width: 38.w,
-                          height: 3.h,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFE0E0E0),
-                            borderRadius: BorderRadius.circular(2.r),
+                      Container(
+                        margin: EdgeInsets.only(top: 12.h),
+                        width: 40.w,
+                        height: 5.h,
+                        decoration: BoxDecoration(
+                          color: Color(0xFFE0E0E2),
+                          borderRadius: BorderRadius.circular(100.r),
+                        ),
+                      ),
+                      Space.yf(20),
+                      Container(
+                        width: 60.w,
+                        height: 60.h,
+                        decoration: BoxDecoration(
+                          color: AppTheme.c.accent.red!,
+                          shape: BoxShape.circle,
+                          boxShadow: [
+                            BoxShadow(
+                              color: AppTheme.c.accent.red!.withValues(
+                                alpha: 0.25,
+                              ),
+                              blurRadius: 0,
+                              spreadRadius: 3.6,
+                              offset: Offset(0, 0),
+                            ),
+                          ],
+                        ),
+                        child: Center(
+                          child: SvgPicture.asset(
+                            'assets/svgs/bin_filled.svg',
+                            width: 30.w,
+                            height: 30.h,
+                            colorFilter: ColorFilter.mode(
+                              AppTheme.c.white!,
+                              BlendMode.srcIn,
+                            ),
                           ),
                         ),
+                      ),
+                      Space.yf(24),
+                      AppHeadings(
+                        title: 'Are You Sure ?',
+                        subtitle: 'Do you really want to delete your account ?',
+                        titleFontSize: 16,
+                        spacingBetweenTitleAndSubtitle: 8,
                       ),
 
-                      // BottomsheetHeader(title: "Delete Account?"),
-                      Space.yf(16),
-                      Text(
-                        'You will loose all your account details and progress of your account here',
-                        style: AppText.b2!.copyWith(
-                          color: AppTheme.c.text.main,
-                        ),
-                        textAlign: TextAlign.left,
-                      ),
-                      // The meal list widget
                       Space.yf(24),
-                      Row(
-                        children: [
-                          Expanded(
-                            child: AppButton(
-                              label: 'Cancel',
-                              buttonType: ButtonType.outlined,
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                            ),
-                          ),
-                          Space.xf(10),
-                          Expanded(
-                            child: AppButton(
-                              label: 'Yes, Delete',
-                              onPressed: () {
-                                Navigator.of(context).pop();
-                              },
-                              buttonType: ButtonType.primaryWithIconLeft,
-                              iconPath: 'assets/svgs/trash.svg',
-                              iconColor: AppTheme.c.white,
-                              textColor: AppTheme.c.white,
-                              backgroundColor: AppTheme.c.accent.red,
-                            ),
-                          ),
-                        ],
+                      AppButton(
+                        label: 'Yes Delete',
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+
+                        textColor: AppTheme.c.white,
+                        backgroundColor: AppTheme.c.accent.red,
+                      ),
+                      Space.yf(12),
+                      AppButton(
+                        label: 'No, Cancel',
+                        buttonType: ButtonType.outlined,
+                        backgroundColor: AppTheme.c.white,
+                        borderColor: AppTheme.c.accent.red,
+                        textColor: AppTheme.c.text.shade800,
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
                       ),
                     ],
                   ),
