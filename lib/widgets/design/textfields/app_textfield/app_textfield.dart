@@ -201,11 +201,12 @@ class AppTextFieldState extends State<AppTextField> {
                         padding: Space.hf(6).copyWith(left: 0),
                         splashRadius: AppDimensions.normalize(8),
                         onPressed: () => setState(() => show = !show),
-                        icon: Icon(
+                        icon: SvgPicture.asset(
                           show
-                              ? Icons.visibility_off_rounded
-                              : Icons.visibility_rounded,
-                          size: AppDimensions.normalize(8.5),
+                              ? 'assets/svgs/eye-disabled.svg'
+                              : 'assets/svgs/eye-open.svg',
+                          width: 24.w,
+                          height: 24.h,
                           color: AppTheme.c.text.main,
                         ),
                       )

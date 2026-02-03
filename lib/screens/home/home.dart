@@ -1,7 +1,7 @@
 import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/router/routes.dart';
 import 'package:convo_pro/widgets/design/cards/ai_recommendations.dart';
-import 'package:convo_pro/widgets/design/rounded_progress_indicator.dart';
+import 'package:convo_pro/widgets/design/cards/courses_completetion_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';

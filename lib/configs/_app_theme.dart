@@ -52,6 +52,8 @@ class AppTheme {
       shade200: const Color(0xFFF6F8FA), //
       shade100: const Color(0xFFF8FAFB), //
       shade400: const Color(0xFFD9D9D9), //
+      shade500: const Color(0xFF8697AC), //
+      shade600: const Color(0xFFE7ECF0), //
     ),
 
     //Error Group

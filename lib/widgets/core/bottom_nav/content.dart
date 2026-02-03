@@ -34,7 +34,7 @@ final List<NavItem> navItems = [
   NavItem(
     label: 'Education',
     icon: 'assets/svgs/book.svg',
-    screen: const Screen4(),
+    screen: const EducationHubScreen(),
   ),
   NavItem(
     label: 'Profile',

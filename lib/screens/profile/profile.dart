@@ -4,6 +4,7 @@ import 'package:convo_pro/widgets/core/app_bar/app_bar.dart';
 import 'package:convo_pro/widgets/design/buttons/app_button/app_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:provider/provider.dart';
 
 part 'widgets/_body.dart';

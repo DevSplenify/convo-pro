@@ -33,8 +33,17 @@ import 'package:convo_pro/screens/audio_sessions/audio_sessions.dart';
 import 'package:convo_pro/screens/text_sessions/text_sessions.dart';
 import 'package:convo_pro/screens/live_session/live_session.dart';
 import 'package:convo_pro/screens/joined_live_session/joined_live_session.dart';
-import 'package:convo_pro/screens/courses/courses.dart';
-import 'package:convo_pro/screens/lessons/lessons.dart';
+import 'package:convo_pro/screens/education_hub/education_hub.dart';
+import 'package:convo_pro/screens/all_courses/all_courses.dart';
+import 'package:convo_pro/screens/all_lessons/all_lessons.dart';
+import 'package:convo_pro/screens/course_details/course_details.dart';
+import 'package:convo_pro/screens/lesson_details/lesson_details.dart';
+import 'package:convo_pro/screens/edit_profile/edit_profile.dart';
+import 'package:convo_pro/screens/settings/settings.dart';
+import 'package:convo_pro/screens/support/support.dart';
+import 'package:convo_pro/screens/faqs/faqs.dart';
+import 'package:convo_pro/screens/achievements/achievements.dart';
+import 'package:convo_pro/screens/locked_journals/locked_journals.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -74,8 +83,17 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.textSessions: (_) => const TextSessionsScreen(),
   AppRoutes.liveSession: (_) => const LiveSessionScreen(),
   AppRoutes.joinedLiveSession: (_) => const JoinedLiveSessionScreen(),
-  AppRoutes.courses: (_) => const CoursesScreen(),
-  AppRoutes.lessons: (_) => const LessonsScreen(),
+  AppRoutes.educationHub: (_) => const EducationHubScreen(),
+  AppRoutes.allCourses: (_) => const AllCoursesScreen(),
+  AppRoutes.allLessons: (_) => const AllLessonsScreen(),
+  AppRoutes.courseDetails: (_) => const CourseDetailsScreen(),
+  AppRoutes.lessonDetails: (_) => const LessonDetailsScreen(),
+  AppRoutes.editProfile: (_) => const EditProfileScreen(),
+  AppRoutes.settings: (_) => const SettingsScreen(),
+  AppRoutes.support: (_) => const SupportScreen(),
+  AppRoutes.faqs: (_) => const FaqsScreen(),
+  AppRoutes.achievements: (_) => const AchievementsScreen(),
+  AppRoutes.lockedJournals: (_) => const LockedJournalsScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

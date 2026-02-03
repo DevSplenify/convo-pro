@@ -34,6 +34,15 @@ abstract class AppRoutes {
   static const textSessions = '/text-sessions';
   static const liveSession = '/live-session';
   static const joinedLiveSession = '/joined-live-session';
-  static const courses = '/courses';
-  static const lessons = '/lessons';
+  static const educationHub = '/education-hub';
+  static const allCourses = '/all-courses';
+  static const allLessons = '/all-lessons';
+  static const courseDetails = '/course-details';
+  static const lessonDetails = '/lesson-details';
+  static const editProfile = '/edit-profile';
+  static const settings = '/settings';
+  static const support = '/support';
+  static const faqs = '/faqs';
+  static const achievements = '/achievements';
+  static const lockedJournals = '/locked-journals';
 }
