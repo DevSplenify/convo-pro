@@ -22,6 +22,7 @@ import 'package:convo_pro/screens/mood_tracker/mood_tracker.dart';
 import 'package:convo_pro/screens/notifications/notifications.dart';
 import 'package:convo_pro/screens/onboarding/onboarding.dart';
 import 'package:convo_pro/screens/reset_password/reset_password.dart';
+import 'package:convo_pro/screens/reviews/reviews.dart';
 import 'package:convo_pro/screens/sign_in/sign_in.dart';
 import 'package:convo_pro/screens/splash/splash.dart';
 import 'package:convo_pro/screens/terms_conditions/terms_conditions.dart';
@@ -44,6 +45,14 @@ import 'package:convo_pro/screens/support/support.dart';
 import 'package:convo_pro/screens/faqs/faqs.dart';
 import 'package:convo_pro/screens/achievements/achievements.dart';
 import 'package:convo_pro/screens/locked_journals/locked_journals.dart';
+import 'package:convo_pro/screens/view_journal/view_journal.dart';
+import 'package:convo_pro/screens/quiz/quiz.dart';
+import 'package:convo_pro/screens/quiz_completed/quiz_completed.dart';
+import 'package:convo_pro/screens/subscription/subscription.dart';
+import 'package:convo_pro/screens/payment_method/payment_method.dart';
+import 'package:convo_pro/screens/confirm_payment_method/confirm_payment_method.dart';
+import 'package:convo_pro/screens/payment_success/payment_success.dart';
+import 'package:convo_pro/screens/add_payment_method/add_payment_method.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -94,6 +103,15 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.faqs: (_) => const FaqsScreen(),
   AppRoutes.achievements: (_) => const AchievementsScreen(),
   AppRoutes.lockedJournals: (_) => const LockedJournalsScreen(),
+  AppRoutes.viewJournal: (_) => const ViewJournalScreen(),
+  AppRoutes.quiz: (_) => const QuizScreen(),
+  AppRoutes.quizCompleted: (_) => const QuizCompletedScreen(),
+  AppRoutes.reviews: (_) => const ReviewsScreen(),
+  AppRoutes.subscription: (_) => const SubscriptionScreen(),
+  AppRoutes.paymentMethod: (_) => const PaymentMethodScreen(),
+  AppRoutes.confirmPaymentMethod: (_) => const ConfirmPaymentMethodScreen(),
+  AppRoutes.paymentSuccess: (_) => const PaymentSuccessScreen(),
+  AppRoutes.addPaymentMethod: (_) => const AddPaymentMethodScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

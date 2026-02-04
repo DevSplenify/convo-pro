@@ -41,7 +41,7 @@ class _Body extends StatelessWidget {
               ],
             ),
             Space.yf(20),
-            _buildPremiumAccessCard(),
+            _buildPremiumAccessCard(context),
             Space.yf(20),
             _buildNavigationItem('Edit Profile', 'assets/svgs/user_P.svg', () {
               AppRoutes.editProfile.push(context);
@@ -95,7 +95,7 @@ class _Body extends StatelessWidget {
     );
   }
 
-  Widget _buildPremiumAccessCard() {
+  Widget _buildPremiumAccessCard(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
         color: AppTheme.c.primary.shade300,
@@ -117,16 +117,21 @@ class _Body extends StatelessWidget {
                     style: AppText.inter.b2,
                   ),
                   Space.yf(8),
-                  Container(
-                    padding: Space.all(16, 10),
-                    decoration: BoxDecoration(
-                      color: AppTheme.c.primary.shade500,
-                      borderRadius: UIProps.buttonRadius,
-                    ),
-                    child: Text(
-                      'Unlock Access',
-                      style: AppText.inter.l1b!.copyWith(
-                        color: AppTheme.c.white,
+                  GestureDetector(
+                    onTap: () {
+                      AppRoutes.subscription.push(context);
+                    },
+                    child: Container(
+                      padding: Space.all(16, 10),
+                      decoration: BoxDecoration(
+                        color: AppTheme.c.primary.shade500,
+                        borderRadius: UIProps.buttonRadius,
+                      ),
+                      child: Text(
+                        'Unlock Access',
+                        style: AppText.inter.l1b!.copyWith(
+                          color: AppTheme.c.white,
+                        ),
                       ),
                     ),
                   ),

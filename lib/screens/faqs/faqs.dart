@@ -1,13 +1,13 @@
 import 'package:convo_pro/configs/configs.dart';
-import 'package:convo_pro/router/routes.dart';
 import 'package:convo_pro/widgets/core/app_bar/app_bar.dart';
-import 'package:convo_pro/widgets/design/buttons/app_button/app_button.dart';
+import 'package:convo_pro/widgets/expandable_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
 part 'widgets/_body.dart';
 part '_state.dart';
+part 'data.dart';
 
 class FaqsScreen extends StatelessWidget {
   const FaqsScreen({super.key});

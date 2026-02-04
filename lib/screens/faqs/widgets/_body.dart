@@ -7,24 +7,35 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     _ScreenState.s(context, true);
     return Scaffold(
-      appBar: const CustomAppBar(type: AppBarType.withText, title: 'FAQs'),
-      floatingActionButton: Padding(
-        padding: Space.hf(24),
-        child: AppButton(
-          label: 'Add FAQ',
-          onPressed: () {},
-          buttonType: ButtonType.primaryWithIconLeft,
-          iconPath: 'assets/svgs/plus.svg',
-          iconSize: 20,
-        ),
+      appBar: const CustomAppBar(
+        type: AppBarType.withText,
+        title: 'Frequently Asked Questions',
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
       body: SingleChildScrollView(
         padding: Space.hf(24).copyWith(
           bottom: MediaQuery.of(context).padding.bottom + 24.h,
           top: 16.h,
         ),
-        child: Column(children: [Text('FAQs content goes here')]),
+        child: Column(
+          children: [
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: Space.z!,
+              itemCount: faqList.length,
+              separatorBuilder: (_, _) => Space.yf(12),
+              itemBuilder: (context, index) {
+                final item = faqList[index];
+
+                return ExpandableCard(
+                  question: item['question']!,
+                  answer: item['answer']!,
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

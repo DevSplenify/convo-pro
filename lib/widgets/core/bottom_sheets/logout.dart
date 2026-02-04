@@ -12,7 +12,7 @@ void showLogoutBottomSheet(BuildContext context, VoidCallback onLogout) {
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.vertical(top: Radius.circular(32.r)),
     ),
-    backgroundColor: AppTheme.c.white!,
+    backgroundColor: AppTheme.c.background.main!,
     builder: (BuildContext context) {
       return Padding(
         padding: EdgeInsets.only(
@@ -26,7 +26,7 @@ void showLogoutBottomSheet(BuildContext context, VoidCallback onLogout) {
               ),
               child: Container(
                 decoration: BoxDecoration(
-                  color: AppTheme.c.white!,
+                  color: AppTheme.c.background.main!,
                   borderRadius: BorderRadius.vertical(
                     top: Radius.circular(32.r),
                   ),

@@ -56,7 +56,15 @@ class _Body extends StatelessWidget {
                     },
                   ),
                   Space.yf(16),
-                  SizedBox(height: 201.h),
+                  GestureDetector(
+                    onTap: () {
+                      AppRoutes.courseDetails.push(context);
+                    },
+                    child: Container(
+                      height: 201.h,
+                      color: AppTheme.c.accent.purpleLight,
+                    ),
+                  ),
                   Space.yf(24),
                   SeeAllHeading(
                     title: 'Short Lessons',

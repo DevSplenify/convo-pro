@@ -16,7 +16,7 @@ class AppTheme {
 
     // ACCENT group
     accent: AccentColors(
-      // orange: const Color(0xFFFFCC00),
+      orange: const Color(0xFFFFCC00),
       yellowLight: const Color(0xFFFDF4D9),
       yellow: const Color(0xFFF2B700),
       purpleLight: const Color(0xFFF8E7FD),

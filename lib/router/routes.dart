@@ -45,4 +45,13 @@ abstract class AppRoutes {
   static const faqs = '/faqs';
   static const achievements = '/achievements';
   static const lockedJournals = '/locked-journals';
+  static const viewJournal = '/view-journal';
+  static const quiz = '/quiz';
+  static const quizCompleted = '/quiz-completed';
+  static const reviews = '/reviews';
+  static const subscription = '/subscription';
+  static const paymentMethod = '/payment-method';
+  static const confirmPaymentMethod = '/confirm-payment-method';
+  static const paymentSuccess = '/payment-success';
+  static const addPaymentMethod = '/add-payment-method';
 }

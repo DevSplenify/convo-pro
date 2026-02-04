@@ -11,23 +11,42 @@ class _Body extends StatelessWidget {
         type: AppBarType.withText,
         title: 'Locked Journals',
       ),
-      floatingActionButton: Padding(
-        padding: Space.hf(24),
-        child: AppButton(
-          label: 'Unlock Journal',
-          onPressed: () {},
-          buttonType: ButtonType.primaryWithIconLeft,
-          iconPath: 'assets/svgs/plus.svg',
-          iconSize: 20,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
       body: SingleChildScrollView(
         padding: Space.hf(24).copyWith(
           bottom: MediaQuery.of(context).padding.bottom + 24.h,
           top: 16.h,
         ),
-        child: Column(children: [Text('Locked journals content goes here')]),
+        child: Column(
+          children: [
+            SearchField(name: 'Search Journals', hint: 'Search anything...'),
+            Space.yf(15),
+            ListView.builder(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+              padding: Space.z,
+              itemCount: journalList.length,
+              itemBuilder: (context, index) {
+                final item = journalList[index];
+
+                return Padding(
+                  padding: EdgeInsets.only(bottom: 12.h),
+                  child: JournalCard(
+                    date: item['date'],
+                    time: item['time'],
+                    title: item['title'],
+                    description: item['description'],
+                    indicatorColor: item['color'],
+                    iconBgColor: item['iconBgColor'],
+                    onTap: () {
+                      AppRoutes.viewJournal.push(context);
+                    },
+                  ),
+                );
+              },
+            ),
+          ],
+        ),
       ),
     );
   }
