@@ -45,7 +45,12 @@ class _Body extends StatelessWidget {
                 title: 'Social Energy',
               ),
               Space.yf(64),
-              AppButton(label: 'Done', onPressed: () {}),
+              AppButton(
+                label: 'Done',
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              ),
             ],
           ),
         ),

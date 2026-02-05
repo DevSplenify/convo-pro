@@ -11,28 +11,7 @@ class _Body extends StatelessWidget {
         type: AppBarType.withText,
         title: 'Edit Trigger',
       ),
-      floatingActionButton: Padding(
-        padding: Space.hf(24),
-        child: AppButton(
-          label: 'Save Changes',
-          onPressed: () {
-            if (screenState.formKey.currentState?.saveAndValidate() ?? false) {
-              if (kDebugMode) {
-                print(
-                  'Form Values: ${screenState.formKey.currentState?.value}',
-                );
-              }
-              Navigator.pop(context);
-            } else {
-              if (kDebugMode) {
-                print('Form is not valid');
-              }
-            }
-          },
-          buttonType: ButtonType.primary,
-        ),
-      ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
       body: SingleChildScrollView(
         padding: Space.hf(24).copyWith(
           bottom: MediaQuery.of(context).padding.bottom + 24.h,
@@ -93,6 +72,26 @@ class _Body extends StatelessWidget {
                 textInputAction: TextInputAction.next,
                 maxLines: 4,
                 minLines: 4,
+              ),
+              Space.yf(24),
+              AppButton(
+                label: 'Save Changes',
+                onPressed: () {
+                  if (screenState.formKey.currentState?.saveAndValidate() ??
+                      false) {
+                    if (kDebugMode) {
+                      print(
+                        'Form Values: ${screenState.formKey.currentState?.value}',
+                      );
+                    }
+                    Navigator.pop(context);
+                  } else {
+                    if (kDebugMode) {
+                      print('Form is not valid');
+                    }
+                  }
+                },
+                buttonType: ButtonType.primary,
               ),
             ],
           ),

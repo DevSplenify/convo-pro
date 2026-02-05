@@ -207,7 +207,12 @@ class AppTextFieldState extends State<AppTextField> {
                               : 'assets/svgs/eye-open.svg',
                           width: 24.w,
                           height: 24.h,
-                          color: AppTheme.c.text.main,
+                          colorFilter: AppTheme.c.text.main != null
+                              ? ColorFilter.mode(
+                                  AppTheme.c.text.main!,
+                                  BlendMode.srcIn,
+                                )
+                              : null,
                         ),
                       )
                     : null),

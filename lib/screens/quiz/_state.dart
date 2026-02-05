@@ -5,7 +5,7 @@ class _ScreenState extends ChangeNotifier {
       Provider.of<_ScreenState>(context, listen: listen);
 
   int _currentQuestionIndex = 0;
-  Map<int, int> _selectedAnswers = {};
+  final Map<int, int> _selectedAnswers = {};
 
   int get currentQuestionIndex => _currentQuestionIndex;
   Map<int, int> get selectedAnswers => _selectedAnswers;
