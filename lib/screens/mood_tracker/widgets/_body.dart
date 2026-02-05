@@ -112,7 +112,7 @@ class _Body extends StatelessWidget {
                       crossAxisCount: 2,
                       mainAxisSpacing: 12.h,
                       crossAxisSpacing: 8.w,
-                      childAspectRatio: 1.65, // 👈 key for same look
+                      childAspectRatio: 1.62, // 👈 key for same look
                     ),
                     itemCount: triggers.length,
                     itemBuilder: (_, index) {

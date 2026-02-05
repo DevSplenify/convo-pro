@@ -42,7 +42,7 @@ class _ExpandableCardState extends State<ExpandableCard>
     _iconRotation =
         Tween<double>(
           begin: -0.25, // UP
-          end: 0.0, // DOWN
+          end: 0.25, // DOWN
         ).animate(
           CurvedAnimation(parent: _controller, curve: Curves.fastOutSlowIn),
         );

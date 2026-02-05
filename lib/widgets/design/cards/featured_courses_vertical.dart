@@ -58,14 +58,7 @@ class FeaturedCoursesVertical extends StatelessWidget {
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: Text(
-                        title,
-                        style: AppText.inter.b2?.w(6),
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
+                    Text(title, style: AppText.inter.b2?.w(6)),
                     Space.xm!,
 
                     /// Arrow Button

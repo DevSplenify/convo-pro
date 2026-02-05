@@ -197,15 +197,19 @@ class _BottomInputSection extends StatelessWidget {
         children: [
           // Filter chips (hide during recording)
           if (!state.isRecording) ...[
-            Row(
-              children: [
-                _FilterChip(label: 'Loving Tone'),
-                Space.xf(5),
-                _FilterChip(label: 'Relationship'),
-                Space.xf(5),
-                _FilterChip(label: 'First Date'),
-              ],
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: [
+                  _FilterChip(label: 'Loving Tone'),
+                  Space.xf(5),
+                  _FilterChip(label: 'Relationship'),
+                  Space.xf(5),
+                  _FilterChip(label: 'First Date'),
+                ],
+              ),
             ),
+
             Space.yf(12),
           ],
 
@@ -354,7 +358,7 @@ class _FilterChip extends StatelessWidget {
         children: [
           Text(label, style: AppText.inter.l1bm),
 
-          Space.xf(10),
+          Space.xf(5),
           SvgPicture.asset(
             'assets/svgs/arrow drop down .svg',
             width: 16.w,

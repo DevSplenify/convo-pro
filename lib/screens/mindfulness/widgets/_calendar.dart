@@ -109,7 +109,7 @@ class _MindfulnessStreakCalendarState extends State<MindfulnessStreakCalendar> {
             _scrollToToday(itemWidth);
 
             return SizedBox(
-              height: 70.h,
+              height: 71.h,
               child: ListView.builder(
                 controller: _scrollController,
                 scrollDirection: Axis.horizontal,

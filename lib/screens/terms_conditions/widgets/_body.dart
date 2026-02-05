@@ -49,55 +49,59 @@ class _Body extends StatelessWidget {
             ),
           ),
           Space.yf(24),
-          Padding(
-            padding: Space.hf(24),
-            child: Column(
-              children: [
-                AppHeadings(
-                  title: 'Terms & Conditions',
-                  subtitle:
-                      'Welcome to our community. By joining and using this platform, you agree to follow the terms outlined below. These rules help keep the community safe, respectful, and valuable for everyone.',
-                  isCentered: false,
-                  spacingBetweenTitleAndSubtitle: 8,
-                  titleFontSize: 16.sp,
-                ),
-                Space.yf(16),
-                _buildTermsItem(
-                  '  1. Community Conduct',
-                  'You agree to interact respectfully with all members. Harassment, hate speech, bullying, or abusive behavior of any kind is not allowed.',
-                ),
-                _buildTermsItem(
-                  '  2. Appropriate Use',
-                  'You are responsible for the content you share. Make sure it is accurate, respectful, and does not violate anyone’s rights or privacy.',
-                ),
-                _buildTermsItem(
-                  '  3. Privacy & Safety',
-                  'Do not share personal, sensitive, or confidential information—yours or others’. Respect the privacy of all community members.',
-                ),
-                Space.yf(24),
-                Row(
-                  children: [
-                    Expanded(
-                      child: AppButton(
-                        label: 'Decline',
-                        buttonType: ButtonType.outlined,
-                        onPressed: () {
-                          // Navigator.pop(context);
-                        },
+          Expanded(
+            child: SingleChildScrollView(
+              padding: Space.hf(
+                24,
+              ).copyWith(bottom: MediaQuery.of(context).padding.bottom + 24.h),
+              child: Column(
+                children: [
+                  AppHeadings(
+                    title: 'Terms & Conditions',
+                    subtitle:
+                        'Welcome to our community. By joining and using this platform, you agree to follow the terms outlined below. These rules help keep the community safe, respectful, and valuable for everyone.',
+                    isCentered: false,
+                    spacingBetweenTitleAndSubtitle: 8,
+                    titleFontSize: 16.sp,
+                  ),
+                  Space.yf(16),
+                  _buildTermsItem(
+                    '  1. Community Conduct',
+                    'You agree to interact respectfully with all members. Harassment, hate speech, bullying, or abusive behavior of any kind is not allowed.',
+                  ),
+                  _buildTermsItem(
+                    '  2. Appropriate Use',
+                    'You are responsible for the content you share. Make sure it is accurate, respectful, and does not violate anyone’s rights or privacy.',
+                  ),
+                  _buildTermsItem(
+                    '  3. Privacy & Safety',
+                    'Do not share personal, sensitive, or confidential information—yours or others’. Respect the privacy of all community members.',
+                  ),
+                  Space.yf(24),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: AppButton(
+                          label: 'Decline',
+                          buttonType: ButtonType.outlined,
+                          onPressed: () {
+                            // Navigator.pop(context);
+                          },
+                        ),
                       ),
-                    ),
-                    Space.xf(12),
-                    Expanded(
-                      child: AppButton(
-                        label: 'Accept',
-                        onPressed: () {
-                          AppRoutes.bottomNavbar.pushReplace(context);
-                        },
+                      Space.xf(12),
+                      Expanded(
+                        child: AppButton(
+                          label: 'Accept',
+                          onPressed: () {
+                            AppRoutes.bottomNavbar.pushReplace(context);
+                          },
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],

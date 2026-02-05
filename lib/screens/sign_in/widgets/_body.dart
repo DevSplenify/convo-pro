@@ -99,7 +99,7 @@ class _Body extends StatelessWidget {
                 AppButton(
                   label: 'Log In',
                   onPressed: () {
-                    // AppRoutes.bottomNav.pushReplace(context);
+                    AppRoutes.bottomNavbar.pushReplace(context);
                   },
                 ),
                 Space.yf(12),

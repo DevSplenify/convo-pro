@@ -15,7 +15,9 @@ class _Body extends StatelessWidget {
         padding: Space.hf(24),
         child: AppButton(
           label: 'Mark As Completed',
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           buttonType: ButtonType.outlined,
           backgroundColor: AppTheme.c.background.main,
         ),

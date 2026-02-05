@@ -13,13 +13,14 @@ class _Body extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _UserHeader(),
-          Space.yf(16),
+
           Expanded(
             child: SingleChildScrollView(
               padding: Space.hf(24).copyWith(bottom: 150.h),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Space.yf(16),
                   Text('Quick Links', style: AppText.b1b),
                   Space.yf(12),
                   Row(
@@ -117,7 +118,7 @@ class _Body extends StatelessWidget {
                           children: [
                             Expanded(
                               child: _buildTherapeuticCoursesItem(
-                                '(ACT) Acceptance Commitment Therapy',
+                                'Acceptance Commitment Therapy',
                                 AppTheme.c.black!,
                                 AppTheme.c.accent.purple!,
                                 () {

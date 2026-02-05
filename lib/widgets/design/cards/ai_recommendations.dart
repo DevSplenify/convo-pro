@@ -45,20 +45,22 @@ class AiRecommendations extends StatelessWidget {
             ),
           ),
           Space.xf(12),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(title, style: AppText.inter.b2b!.w(6)),
-              Space.yf(3),
-              Text(
-                subtitle,
-                style: AppText.inter.l1!.cl(AppTheme.c.text.main!),
-                maxLines: 1,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: AppText.inter.b2b!.w(6)),
+                Space.yf(3),
+                Text(
+                  subtitle,
+                  style: AppText.inter.l1!.cl(AppTheme.c.text.main!),
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                ),
+              ],
+            ),
           ),
-          Space.xm!,
+          Space.xf(12),
           SvgPicture.asset(AppStaticData.arrowRight, width: 24.w, height: 24.h),
         ],
       ),

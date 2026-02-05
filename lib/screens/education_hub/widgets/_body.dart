@@ -46,6 +46,9 @@ class _Body extends StatelessWidget {
 
           Expanded(
             child: SingleChildScrollView(
+              padding: EdgeInsets.only(
+                bottom: MediaQuery.of(context).padding.bottom + 24.h,
+              ),
               child: Column(
                 children: [
                   Space.yf(20),
@@ -58,7 +61,7 @@ class _Body extends StatelessWidget {
                   ),
                   Space.yf(16),
                   SizedBox(
-                    height: 201.h,
+                    height: 205.h,
 
                     child: ListView.separated(
                       shrinkWrap: true,
