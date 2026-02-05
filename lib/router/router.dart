@@ -56,6 +56,7 @@ import 'package:convo_pro/screens/add_payment_method/add_payment_method.dart';
 import 'package:convo_pro/screens/journaling/journaling.dart';
 import 'package:convo_pro/screens/create_journal/create_journal.dart';
 import 'package:convo_pro/screens/journal_search/journal_search.dart';
+import 'package:convo_pro/screens/ai_conversation/ai_conversation.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -118,6 +119,7 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.journaling: (_) => const JournalingScreen(),
   AppRoutes.createJournal: (_) => const CreateJournalScreen(),
   AppRoutes.journalSearch: (_) => const JournalSearchScreen(),
+  AppRoutes.aiConversation: (_) => const AiConversationScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {

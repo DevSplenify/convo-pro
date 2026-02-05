@@ -54,7 +54,9 @@ class _Body extends StatelessWidget {
                         child: _buildQuickActions(
                           'AI Conversation Assistant',
                           'assets/svgs/bot.svg',
-                          () {},
+                          () {
+                            AppRoutes.aiConversation.push(context);
+                          },
                         ),
                       ),
                       Space.xf(8),

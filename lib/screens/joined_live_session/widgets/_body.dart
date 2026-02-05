@@ -96,17 +96,22 @@ class _Body extends StatelessWidget {
                       }),
                       Space.yf(20),
                       _buildActionIcon('assets/svgs/chat.svg', '128', () {
-                        // Handle chat icon tap
+                        showCommentsBottomSheet(context);
                       }),
                       Space.yf(20),
-                      SvgPicture.asset(
-                        'assets/svgs/send.svg',
-                        colorFilter: ColorFilter.mode(
-                          AppTheme.c.white!,
-                          BlendMode.srcIn,
+                      GestureDetector(
+                        onTap: () {
+                          showShareToBottomSheet(context);
+                        },
+                        child: SvgPicture.asset(
+                          'assets/svgs/send.svg',
+                          colorFilter: ColorFilter.mode(
+                            AppTheme.c.white!,
+                            BlendMode.srcIn,
+                          ),
+                          width: 28.w,
+                          height: 28.h,
                         ),
-                        width: 28.w,
-                        height: 28.h,
                       ),
                     ],
                   ),

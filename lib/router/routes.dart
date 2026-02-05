@@ -57,4 +57,5 @@ abstract class AppRoutes {
   static const journaling = '/journaling';
   static const createJournal = '/create-journal';
   static const journalSearch = '/journal-search';
+  static const aiConversation = '/ai-conversation';
 }

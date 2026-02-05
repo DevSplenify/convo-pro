@@ -40,9 +40,7 @@ class CommentTile extends StatelessWidget {
                 children: [
                   Text(
                     time,
-                    style: AppText.inter.l2bm!.cl(
-                      AppTheme.c.lightGrey.shade500!,
-                    ),
+                    style: AppText.inter.l2bm!.cl(AppTheme.c.text.main!),
                   ),
                   Space.xf(4),
                   Icon(
