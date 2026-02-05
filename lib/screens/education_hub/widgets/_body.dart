@@ -43,26 +43,41 @@ class _Body extends StatelessWidget {
               ],
             ),
           ),
-          Space.yf(20),
+
           Expanded(
             child: SingleChildScrollView(
-              padding: Space.hf(24),
               child: Column(
                 children: [
+                  Space.yf(20),
                   SeeAllHeading(
                     title: 'Featured Courses',
                     onTap: () {
                       AppRoutes.allCourses.push(context);
                     },
+                    hasHorizontalPadding: true,
                   ),
                   Space.yf(16),
-                  GestureDetector(
-                    onTap: () {
-                      AppRoutes.courseDetails.push(context);
-                    },
-                    child: Container(
-                      height: 201.h,
-                      color: AppTheme.c.accent.purpleLight,
+                  SizedBox(
+                    height: 201.h,
+
+                    child: ListView.separated(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      padding: EdgeInsets.only(left: 24.w),
+                      itemBuilder: (context, index) {
+                        return FeaturedCoursesHorizontal(
+                          image: 'assets/pngs/course2.png',
+                          title: 'Speak with Confidence',
+                          duration: '3h 20m',
+                          rating: '4.5',
+                          noOfReviews: 120,
+                          onTap: () {
+                            AppRoutes.courseDetails.push(context);
+                          },
+                        );
+                      },
+                      separatorBuilder: (_, _) => Space.xf(15),
+                      itemCount: 5,
                     ),
                   ),
                   Space.yf(24),
@@ -71,6 +86,30 @@ class _Body extends StatelessWidget {
                     onTap: () {
                       AppRoutes.allLessons.push(context);
                     },
+                    hasHorizontalPadding: true,
+                  ),
+                  Space.yf(16),
+                  ListView.separated(
+                    shrinkWrap: true,
+                    physics: NeverScrollableScrollPhysics(),
+                    padding: Space.hf(24),
+                    itemBuilder: (context, index) {
+                      return ShortLessonsCard(
+                        image: 'assets/pngs/lesson.png',
+                        title: '3D Character Lumion',
+                        duration: 'Duration: 1hr 20min',
+                        rating: '4.9',
+                        noOfReviews: 1724,
+                        onTap: () {
+                          AppRoutes.lessonDetails.push(context);
+                        },
+                        onTapPlay: () {
+                          AppRoutes.lessonDetails.push(context);
+                        },
+                      );
+                    },
+                    separatorBuilder: (_, _) => Space.yf(12),
+                    itemCount: 5,
                   ),
                 ],
               ),

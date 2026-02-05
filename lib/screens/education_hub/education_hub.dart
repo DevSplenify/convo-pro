@@ -2,6 +2,8 @@ import 'package:convo_pro/configs/configs.dart';
 import 'package:convo_pro/router/routes.dart';
 import 'package:convo_pro/widgets/core/headers/see_all_heading.dart';
 import 'package:convo_pro/widgets/design/cards/courses_completetion_card.dart';
+import 'package:convo_pro/widgets/design/cards/featured_courses_horizontal.dart';
+import 'package:convo_pro/widgets/design/cards/short_lessons_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';

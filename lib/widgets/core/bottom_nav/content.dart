@@ -24,7 +24,7 @@ final List<NavItem> navItems = [
   NavItem(
     label: 'Journaling',
     icon: 'assets/svgs/journaling.svg',
-    screen: const Screen2(),
+    screen: const JournalingScreen(),
   ),
   NavItem(
     label: 'Mindfulness',

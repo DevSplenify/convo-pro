@@ -19,7 +19,30 @@ class _Body extends StatelessWidget {
         ),
         child: Column(
           children: [
-            SearchField(name: 'Search Courses', hint: 'Search anything...'),
+            SearchField(name: 'Search Lessons', hint: 'Search anything...'),
+            Space.yf(24),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              padding: Space.z,
+              itemBuilder: (context, index) {
+                return ShortLessonsCard(
+                  image: 'assets/pngs/lesson.png',
+                  title: '3D Character Lumion',
+                  duration: 'Duration: 1hr 20min',
+                  rating: '4.9',
+                  noOfReviews: 1724,
+                  onTap: () {
+                    AppRoutes.lessonDetails.push(context);
+                  },
+                  onTapPlay: () {
+                    AppRoutes.lessonDetails.push(context);
+                  },
+                );
+              },
+              separatorBuilder: (_, _) => Space.yf(12),
+              itemCount: 5,
+            ),
           ],
         ),
       ),

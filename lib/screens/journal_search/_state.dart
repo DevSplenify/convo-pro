@@ -1,13 +1,6 @@
-part of 'subscription.dart';
+part of 'journal_search.dart';
 
 class _ScreenState extends ChangeNotifier {
-  String selectedPlan = 'yearly';
-
-  void selectPlan(String id) {
-    selectedPlan = id;
-    notifyListeners();
-  }
-
   static _ScreenState s(BuildContext context, [bool listen = false]) =>
       Provider.of<_ScreenState>(context, listen: listen);
 }

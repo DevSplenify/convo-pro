@@ -20,6 +20,27 @@ class _Body extends StatelessWidget {
         child: Column(
           children: [
             SearchField(name: 'Search Courses', hint: 'Search anything...'),
+            Space.yf(24),
+            ListView.separated(
+              shrinkWrap: true,
+              physics: const NeverScrollableScrollPhysics(),
+
+              padding: Space.z,
+              itemBuilder: (context, index) {
+                return FeaturedCoursesVertical(
+                  image: 'assets/pngs/course2.png',
+                  title: 'Speak with Confidence',
+                  duration: '3h 20m',
+                  rating: '4.5',
+                  noOfReviews: 120,
+                  onTap: () {
+                    AppRoutes.courseDetails.push(context);
+                  },
+                );
+              },
+              separatorBuilder: (_, _) => Space.yf(12),
+              itemCount: 5,
+            ),
           ],
         ),
       ),

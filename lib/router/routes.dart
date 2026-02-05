@@ -54,4 +54,7 @@ abstract class AppRoutes {
   static const confirmPaymentMethod = '/confirm-payment-method';
   static const paymentSuccess = '/payment-success';
   static const addPaymentMethod = '/add-payment-method';
+  static const journaling = '/journaling';
+  static const createJournal = '/create-journal';
+  static const journalSearch = '/journal-search';
 }

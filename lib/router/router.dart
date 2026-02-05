@@ -53,6 +53,9 @@ import 'package:convo_pro/screens/payment_method/payment_method.dart';
 import 'package:convo_pro/screens/confirm_payment_method/confirm_payment_method.dart';
 import 'package:convo_pro/screens/payment_success/payment_success.dart';
 import 'package:convo_pro/screens/add_payment_method/add_payment_method.dart';
+import 'package:convo_pro/screens/journaling/journaling.dart';
+import 'package:convo_pro/screens/create_journal/create_journal.dart';
+import 'package:convo_pro/screens/journal_search/journal_search.dart';
 import 'package:convo_pro/widgets/core/bottom_nav/bottom_navbar.dart';
 import 'package:flutter/material.dart';
 
@@ -112,6 +115,9 @@ final Map<String, Widget Function(dynamic)> appRoutes = {
   AppRoutes.confirmPaymentMethod: (_) => const ConfirmPaymentMethodScreen(),
   AppRoutes.paymentSuccess: (_) => const PaymentSuccessScreen(),
   AppRoutes.addPaymentMethod: (_) => const AddPaymentMethodScreen(),
+  AppRoutes.journaling: (_) => const JournalingScreen(),
+  AppRoutes.createJournal: (_) => const CreateJournalScreen(),
+  AppRoutes.journalSearch: (_) => const JournalSearchScreen(),
 };
 
 void navigateToScreen(BuildContext context, Widget screen) {
